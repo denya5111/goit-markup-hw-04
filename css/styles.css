@@ -151,7 +151,7 @@ header {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/header-bg-img.jpg');
   background-position: center;
-  block-size: cover;
+  background-size: cover;
 }
 .hero-container {
   max-width: 696px;
@@ -207,7 +207,6 @@ header {
   gap: 30px;
 }
 .peculiarities-icon-container {
-  width: 270px;
   height: 120px;
   background: #f5f4fa;
   border-radius: 4px;
@@ -316,7 +315,7 @@ header {
   gap: 30px;
 }
 .clients-item {
-  width: 170px;
+  width: calc((100% - 150px) / 6);
   height: 92px;
 }
 .clients-link {
@@ -426,7 +425,8 @@ footer .logo {
   border-radius: 50%;
   color: #ffffff;
 }
-.footer-join-link:hover {
+.footer-join-link:hover,
+.footer-join-link:focus {
   background-color: var(--accent-color);
 }
 .footer-join-icon {
@@ -470,10 +470,19 @@ footer .logo {
 .portfolio-item {
   width: calc((100% - 60px) / 3);
 }
-.portfolio-item:hover {
+.portfolio-link {
+  display: block;
+  color: inherit;
+}
+.portfolio-link:hover,
+.portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+/* .portfolio-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+} */
 .portfolio-item-about {
   background: #ffffff;
 
